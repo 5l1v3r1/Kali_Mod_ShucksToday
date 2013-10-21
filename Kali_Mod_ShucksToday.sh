@@ -29,24 +29,24 @@ apt-get install -y git live-build cdebootstrap kali-archive-keyring
 
 ## Adding some programs that I like in every Linux distro :)
 
-apt-get install -y vim-nox vim-doc mtr strace wipe secure-delete htop ntop sntop
+apt-get install -y vim-nox vim-doc mtr strace wipe secure-delete htop sntop
 
-## Add some programs I like in Kali ;)
+## Add some programs I like in Kali ;) 
 
 apt-get install -y masscan
 
-## Laptop & Desktop: Minor program additions to make working easier.
+## Laptop & Desktop: Minor program additions to make working easier. This is tested & working.
 
 apt-get -y install icedove basket
 
-## Some other ham radio stuff - radios are fun!
+## Some other ham radio stuff - radios are fun! This is tested & working.
 
 apt-get install -y chirp
 
-## We add some gems. "ruby1.9.1-dev" & "libsqlite3-dev" are required for Ronin.
+## We add some gems. "ruby1.9.1-dev" & "libsqlite3-dev" are required for Ronin. This is tested & working.
 
-apt-get install -y ruby1.9.1-dev libsqlite3-dev sqlite3-doc
-gem install fuzzbert ronin ronin-asm ronin-dorks ronin-exploits ronin-gen ronin-grid ronin-php ronin-scanners ronin-sql ronin-support ronin-web
+#apt-get install -y ruby1.9.1-dev libsqlite3-dev sqlite3-doc
+#gem install fuzzbert ronin ronin-asm ronin-dorks ronin-exploits ronin-gen ronin-grid ronin-php ronin-scanners ronin-sql ronin-support ronin-web
 
 ## Comment these lines out if you are not using a laptop.
 
@@ -58,8 +58,8 @@ apt-get install -y laptop-mode-tools
 
 ## Getting OpenVAS set up - not done yet.
 
-#sh -c "openvas-check-setup;${SHELL:-bash}"
-#sh -c "openvas-setup;${SHELL:-bash}"
+#openvas-check-setup
+#penvas-setup
 
 ## Make personal /opt, /virtual_machines, & /git directories. 
 
