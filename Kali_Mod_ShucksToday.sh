@@ -23,9 +23,13 @@ apt-get install -y kali-linux-all
 
 apt-get install -y git live-build cdebootstrap kali-archive-keyring
 
+# Apt-get drivers & such for my the ThinkPad
+
+#apt-get -y install hdapsd tp-smapi-dkms tpb
+
 ## Adding some programs that I like in every Linux distro :)
 
-apt-get install -y vim-nox vim-doc mtr strace wipe secure-delete
+apt-get install -y vim-nox vim-doc mtr strace wipe secure-delete htop ntop sntop
 
 ## Add some programs I like in Kali ;)
 
@@ -87,6 +91,18 @@ cd /root/opt
 
 #git clone git://git.kali.org/live-build-config.git
 #git clone https://github.com/zcutlip/bowcaster.git
+
+# Now to untar stuff
+
+#tar xvjf devkitARM_r41-i686-linux.tar.bz2 devkitpro/
+#tar xvzf PwnSTAR_0.9.tgz
+#tar xfvz Wi-fEye-v0.5.6.tar.gz
+#tar xfvz SubterfugePublicBeta5.0.tar.gz
+
+# Changing permissions on simple stuff
+
+#chmod +x wp4.sh
+#chmod +x CookieCadger-1.0.jar
 
 # Removing unneccessary files.
 

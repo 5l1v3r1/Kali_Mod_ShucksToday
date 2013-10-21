@@ -1,15 +1,2 @@
-# Apt-get drivers & such for my laptop (ThinkPad T61p)
-#apt-get -y install hdapsd tp-smapi-dkms
-
 # Apt-get shit that Kali needs
-p7zip build-essential libqt4-dev qt4-doc qt4-dev-tools xfs-progs python-pip libyaml mingw32 sqlmap bully lbd automater wce lib32ncurses5 ia32-libs python-software-properties tpb unetbootin basket network-manager-openvpn-gnome network-manager-pptp-gnome network-manager-vpnc-gnome gkrellm gkrellm-thinkbat gkrellmitime htop arp-scan kernel-package libncurses5-dev apt-cacher-ng gns3 gpredict cdck automake1.9 checkinstall libcompfaceg1 libcompfaceg1-dev libssl-dev libssl-doc
-
-# Now to untar stuff
-tar xvjf devkitARM_r41-i686-linux.tar.bz2 devkitpro/
-tar xvzf PwnSTAR_0.9.tgz
-tar xfvz Wi-fEye-v0.5.6.tar.gz
-tar xfvz SubterfugePublicBeta5.0.tar.gz
-
-# Changing permissions on simple stuff
-chmod +x wp4.sh
-chmod +x CookieCadger-1.0.jar
+p7zip build-essential libqt4-dev qt4-doc qt4-dev-tools xfs-progs python-pip libyaml mingw32 wce lib32ncurses5 ia32-libs python-software-properties unetbootin network-manager-openvpn-gnome network-manager-pptp-gnome network-manager-vpnc-gnome gkrellm gkrellm-thinkbat gkrellmitime arp-scan kernel-package libncurses5-dev gns3 gpredict cdck automake1.9 checkinstall libcompfaceg1 libcompfaceg1-dev libssl-dev libssl-doc
