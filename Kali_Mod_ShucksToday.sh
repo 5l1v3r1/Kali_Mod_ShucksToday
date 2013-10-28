@@ -33,13 +33,13 @@ apt-get install -y vim-nox vim-doc mtr strace wipe secure-delete htop sntop
 
 ## Add some programs I like in Kali ;) 
 
-apt-get install -y masscan
+apt-get install -y masscan cookie-cadger
 
 ## Laptop & Desktop: Minor program additions to make working easier. This is tested & working.
 
 apt-get -y install icedove basket pidgin pidgin-extprefs pidgin-hotkeys pidgin-openpgp pidgin-otr pidgin-plugin-pack pidgin-privacy-please
 
-## Some other ham radio stuff - radios are fun! This is tested & working.
+## Laptop & Desktop: Some other ham radio stuff - radios are fun! This is tested & working.
 
 apt-get install -y chirp
 
@@ -80,24 +80,28 @@ cd /root/opt
 ## Wget some projects; it may be necessary to update the download links (especially for new versions).
 
 #wget http://www.srware.net/downloads/iron64.deb - SRWare Iron is not working due to a dependency problem.
-#wget http://downloads.sourceforge.net/project/wxhexeditor/wxHexEditor/v0.22%20Beta/wxHexEditor-v0.22-src.tar.bz2
-#wget http://techpatterns.com/downloads/download_item.php?folder=firefox&filename=useragentswitcher.xml
-#wget wifipineapple.com/wp4.sh
-#wget https://pwn-star.googlecode.com/files/PwnSTAR_0.9.tgz
-#wget https://www.cookiecadger.com/files/CookieCadger-1.0.jar
-#wget http://www.sptoolkit.com/?aid=2755&sa=1
-#wget http://subterfuge.googlecode.com/files/SubterfugePublicBeta5.0.tar.gz
+#wget http://downloads.sourceforge.net/project/wxhexeditor/wxHexEditor/v0.22%20Beta/wxHexEditor-v0.22-src.tar.bz2 - wxHexEditor is not compiling due to autotools not being installed.
+#wget http://techpatterns.com/downloads/download_item.php?folder=firefox&filename=useragentswitcher.xml - this is working.
+wget wifipineapple.com/wp4.sh
+wget http://pwn-star.googlecode.com/files/PwnSTAR_0.9.tgz
+wget http://subterfuge.googlecode.com/files/SubterfugePublicBeta5.0.tar.gz
+wget http://wi-feye.za1d.com/releases/Wi-fEye-v1.0-beta.tar.gz
+wget https://www.soldierx.com/system/files/sxlabs/projects/Blake/wdivulge.tar.gz
 
 ## Subversion some projects...
 
 #svn checkout http://fuzzdb.googlecode.com/svn/trunk/ fuzzdb
-#svn checkout http://proxmark3.googlecode.com/svn/trunk pm3
+svn checkout http://xssf.googlecode.com/svn/trunk/ xssf
+#svn checkout http://kautilya.googlecode.com/svn/trunk/ kautilya - this doesn't work because Kali doesn't have the dependencies for the Teensy.
+svn checkout http://proxmark3.googlecode.com/svn/trunk pm3
 
 ## & Make Git requests for other projects.
 
-#git clone git://git.kali.org/live-build-config.git
-#git clone https://github.com/zcutlip/bowcaster.git
+git clone git://git.kali.org/live-build-config.git live-build-config
+git clone https://github.com/zcutlip/bowcaster.git bowcaster
+git clone https://github.com/sptoolkit/sptoolkit.git sptoolkit
 #git clone git://github.com/skysploit/simple-ducky.git simple-ducky
+git clone https://github.com/hatRiot/zarp.git zarp
 
 ## Moving installers to /root/opt/installers
 
@@ -105,16 +109,16 @@ cd /root/opt
 
 ## Now to untar stuff
 
-#tar xvjf devkitARM_r41-i686-linux.tar.bz2 devkitpro/
-#tar xvzf PwnSTAR_0.9.tgz
-#tar xfvz Wi-fEye-v0.5.6.tar.gz
-#tar xfvz SubterfugePublicBeta5.0.tar.gz
+mkdir PwnSTAR && cd PwnSTAR && mv PwnSTAR_0.9.tgz PwnSTAR 
+tar xvzf PwnSTAR_0.9.tgz
+cd ../
+tar xfvz Wi-fEye-v1.0.tar.gz
+tar xfvz SubterfugePublicBeta5.0.tar.gz
 
 ## Changing permissions on simple stuff
 
-#chmod +x wp4.sh
-#chmod +x CookieCadger-1.0.jar
-#chmod +x /root/opt/installers/iron64.deb
+chmod +x wp4.sh
+chmod +x /root/opt/installers/iron64.deb
 
 ## Move a couple of things to where we want them.
 
@@ -126,10 +130,9 @@ cd /root/opt
 
 # Removing unneccessary files.
 
-#rm devkitARM_r41-i686-linux.tar.bz2 devkitpro/
-#rm PwnSTAR_0.9.tgz
-#rm Wi-fEye-v0.5.6.tar.gz
-#rm SubterfugePublicBeta5.0.tar.gz
+mv PwnSTAR_0.9.tgz /root/opt/installers
+mv Wi-fEye-v1.0.tar.gz /root/opt/installers
+mv SubterfugePublicBeta5.0.tar.gz /root/opt/installers
 
 ## Cleanup unnecessary stuff.
 
