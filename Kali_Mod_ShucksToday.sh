@@ -25,7 +25,11 @@ apt-get install -y git live-build cdebootstrap kali-archive-keyring
 
 # Apt-get drivers & such for my the ThinkPad
 
-#apt-get -y install hdapsd tp-smapi-dkms tpb
+#apt-get -y install hdapsd tp-smapi-dkms tpb thinkfan
+#modprobe tp_smapi
+#echo "tp_smapi" >> /etc/modules
+#echo "hdaps" >> /etc/modules
+#update-initramfs -u
 
 ## Adding some programs that I like in every Linux distro :)
 
